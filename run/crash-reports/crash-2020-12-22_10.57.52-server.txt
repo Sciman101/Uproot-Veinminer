@@ -1,0 +1,60 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 12/22/20 10:57 AM
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at net.minecraftforge.fml.config.ModConfig.setConfigData(ModConfig.java:86) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:105) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.lambda$loadConfigs$1(ConfigTracker.java:83) ~[forge:?] {re:classloading}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:1.8.0_241] {}
+	at java.util.Collections$SynchronizedCollection.forEach(Collections.java:2064) ~[?:1.8.0_241] {}
+	at net.minecraftforge.fml.config.ConfigTracker.loadConfigs(ConfigTracker.java:83) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.server.ServerLifecycleHooks.handleServerAboutToStart(ServerLifecycleHooks.java:95) ~[forge:?] {re:classloading}
+	at net.minecraft.server.integrated.IntegratedServer.init(IntegratedServer.java:59) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:620) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_241] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 726772408 bytes (693 MB) / 1738539008 bytes (1658 MB) up to 3795845120 bytes (3620 MB)
+	CPUs: 12
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.13_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.13_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.13_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.13_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.13_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.13
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.4              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		forge-1.16.4-35.1.13_mapped_snapshot_20201028-1.16|Forge                         |forge                         |35.1.13             |DONE      |NOSIGNATURE
+		main                                              |Sciman's Simple Veinminer     |veinminer                     |NONE                |DONE      |NOSIGNATURE
+	Crash Report UUID: 856b5c4f-ef49-4a4a-b2f0-d11aec2fcdb0
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:forge, mod:veinminer
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'
