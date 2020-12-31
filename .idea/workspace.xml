@@ -50,7 +50,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lydj9lyFbLUGftNTGBA0GnLWbO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -58,6 +62,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fabricmod" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
@@ -65,7 +70,7 @@
       <recent name="C:\Users\izzoy\repos\simple-veinminer\run\mods" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.runClient">
+  <component name="RunManager" selected="Gradle.simple-veinminer [build]">
     <configuration name="simple-veinminer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -153,37 +158,44 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608653746714" />
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom" timestamp="1608999471054">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1609014574089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608999471054" />
-    <state width="1877" height="125" key="GridCell.Tab.0.center" timestamp="1608999471054">
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609014574089" />
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1609425740085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608999471054" />
-    <state width="1877" height="125" key="GridCell.Tab.0.left" timestamp="1608999471054">
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609425740085" />
+    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1609425740085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608999471054" />
-    <state width="1877" height="125" key="GridCell.Tab.0.right" timestamp="1608999471054">
+    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609425740085" />
+    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1609425740085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608999471054" />
-    <state width="1877" height="125" key="GridCell.Tab.1.bottom" timestamp="1608999470946">
+    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609425740085" />
+    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1609425740085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608999470946" />
-    <state width="1877" height="125" key="GridCell.Tab.1.center" timestamp="1608999470946">
+    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609425740085" />
+    <state width="1877" height="231" key="GridCell.Tab.1.bottom" timestamp="1609015865371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608999470946" />
-    <state width="1877" height="125" key="GridCell.Tab.1.left" timestamp="1608999470946">
+    <state width="1877" height="231" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609015865371" />
+    <state width="1877" height="231" key="GridCell.Tab.1.center" timestamp="1609015865371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608999470946" />
-    <state width="1877" height="125" key="GridCell.Tab.1.right" timestamp="1608999470946">
+    <state width="1877" height="231" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609015865371" />
+    <state width="1877" height="231" key="GridCell.Tab.1.left" timestamp="1609015865371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="125" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608999470946" />
+    <state width="1877" height="231" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609015865371" />
+    <state width="1877" height="231" key="GridCell.Tab.1.right" timestamp="1609015865371">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="231" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609015865371" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/simple_veinminer$runClient.ic" NAME="runClient Coverage Results" MODIFIED="1609015755619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

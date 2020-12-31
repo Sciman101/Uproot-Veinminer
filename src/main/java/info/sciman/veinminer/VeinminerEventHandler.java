@@ -43,7 +43,19 @@ public class VeinminerEventHandler {
                         if (VeinminerMod.blockList.contains(state.getBlock()) && VeinminerMod.toolList.contains(stack.getItem())) {
 
                             // Did we find a valid tool/blockstate combo?
-                            if (stack.canHarvestBlock(state)) {
+                            boolean match = stack.canHarvestBlock(state);
+                            if (!match) {
+                                // Try alternate method
+                                Iterator toolTypeIter = types.iterator();
+                                while (toolTypeIter.hasNext()) {
+                                    if (state.getHarvestTool().equals(toolTypeIter.next())) {
+                                        match = true;
+                                        break;
+                                    }
+                                }
+                            }
+
+                            if (match) {
 
                                 // Get the number of blocks we can mine, maximum
                                 int maxBlocksToMine = stack.getMaxDamage() - stack.getDamage();
