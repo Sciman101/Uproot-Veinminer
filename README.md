@@ -14,6 +14,9 @@ When breaking a block, hold the sneak key. If the tool being used is on the tool
  - /uproot maxsize - View the maximum vein size 
  - /uproot maxsize <max vein size> - Update the maximum number of blocks that can be mined at once
 
+## Known Bugs
+ - Running the add/remove commands without including the item namespace results in an error in chat. However, for items in the ``minecraft:`` namespace, the addition/removal should still be a success.
+
 ## Support
 Because Uproot tries to determine if a tool should work on a block dynamically, it may not work on certain blocks. If this is the case, open an issue and I'll get to it ASAP.
 I don't have any plans to update Uproot to later Minecraft versions at the time, but if people end up enjoying the mod then it I'll consider it.
