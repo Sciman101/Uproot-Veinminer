@@ -1,9 +1,8 @@
-package info.sciman.veinminer;
+package info.sciman.uproot;
 
-import info.sciman.veinminer.setup.Config;
+import info.sciman.uproot.setup.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.item.ExperienceOrbEntity;
@@ -13,7 +12,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -21,7 +19,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class VeinminerEventHandler {
+public class UprootEventHandler {
     @SubscribeEvent
     public void onBlockBroken(BlockEvent.BreakEvent event) {
         // Check if player exists and is sneaking
@@ -40,7 +38,7 @@ public class VeinminerEventHandler {
                         BlockState state = event.getState();
 
                         // Are both of these in the block/toollist?
-                        if (VeinminerMod.blockList.contains(state.getBlock()) && VeinminerMod.toolList.contains(stack.getItem())) {
+                        if (UprootMod.blockList.contains(state.getBlock()) && UprootMod.toolList.contains(stack.getItem())) {
 
                             // Did we find a valid tool/blockstate combo?
                             boolean match = stack.canHarvestBlock(state);

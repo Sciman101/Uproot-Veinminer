@@ -1,7 +1,6 @@
-package info.sciman.veinminer.setup;
+package info.sciman.uproot.setup;
 
 import com.google.common.base.Predicates;
-import info.sciman.veinminer.VeinminerMod;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;
 

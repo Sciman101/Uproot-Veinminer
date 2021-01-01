@@ -1,11 +1,11 @@
-package info.sciman.veinminer.cmd;
+package info.sciman.uproot.cmd;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.tree.LiteralCommandNode;
-import info.sciman.veinminer.VeinminerMod;
-import info.sciman.veinminer.setup.Config;
+import info.sciman.uproot.UprootMod;
+import info.sciman.uproot.setup.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.command.CommandSource;
@@ -13,7 +13,6 @@ import net.minecraft.command.Commands;
 import net.minecraft.command.arguments.ItemArgument;
 import net.minecraft.command.arguments.ItemInput;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -21,7 +20,7 @@ import net.minecraft.util.text.TranslationTextComponent;
 import java.util.List;
 import java.util.Objects;
 
-public class VeinminerConfigCommand  {
+public class UprootConfigCommand {
 
     // What can we do to a list?
     enum ListChangeBehaviour {
@@ -31,8 +30,7 @@ public class VeinminerConfigCommand  {
 
     public static void register(CommandDispatcher<CommandSource> dispatcher) {
         LiteralCommandNode<CommandSource> cmdVeinminer = dispatcher.register(
-                Commands.literal("vm").requires(cs -> cs.hasPermissionLevel(2))
-
+                Commands.literal("uproot").requires(cs -> cs.hasPermissionLevel(2))
                         .then(Commands.literal("blocklist")
                             .then(Commands.literal("add")
                                 .then(Commands.argument("block",ItemArgument.item())
@@ -52,7 +50,8 @@ public class VeinminerConfigCommand  {
                             .executes(cs -> displayToolList(cs)))
 
                         .then(Commands.literal("reload")
-                            .executes((cs) -> {VeinminerMod.reloadBlockAndToolList(); cs.getSource().sendFeedback(new StringTextComponent("Reloading Block/Tool list from file"),false);return 0;}))
+                            .executes((cs) -> {
+                                UprootMod.reloadBlockAndToolList(); cs.getSource().sendFeedback(new StringTextComponent("Reloading Block/Tool list from file"),false);return 0;}))
 
                         .then(Commands.literal("maxsize")
                             .executes((cs) -> {cs.getSource().sendFeedback(new StringTextComponent("Current max vein size is " + Config.MAX_VEIN_SIZE.get()),true); return 0;})
@@ -65,7 +64,7 @@ public class VeinminerConfigCommand  {
     // Display the blocklist
     private static int displayBlockList(CommandContext<CommandSource> cs) {
         TextComponent msg = new StringTextComponent("Current Blocklist:\n");
-        for (Block b : VeinminerMod.blockList) {
+        for (Block b : UprootMod.blockList) {
             msg.append(new TranslationTextComponent(b.getTranslationKey()));
             msg.append(new StringTextComponent(", "));
         }
@@ -75,7 +74,7 @@ public class VeinminerConfigCommand  {
     }
     private static int displayToolList(CommandContext<CommandSource> cs) {
         TextComponent msg = new StringTextComponent("Current Toollist:\n");
-        for (Item i : VeinminerMod.toolList) {
+        for (Item i : UprootMod.toolList) {
             msg.append(new TranslationTextComponent(i.getTranslationKey()));
             msg.append(new StringTextComponent(", "));
         }
@@ -102,7 +101,7 @@ public class VeinminerConfigCommand  {
 
             if (mod == ListChangeBehaviour.ADD) {
                 // Add to list
-                VeinminerMod.toolList.add(item);
+                UprootMod.toolList.add(item);
 
                 // Add to config
                 toolIdList.add(item.getRegistryName().toString());
@@ -113,7 +112,7 @@ public class VeinminerConfigCommand  {
                         .append(new StringTextComponent(" to tool list")),true);
             }else{
                 // Add to list
-                VeinminerMod.toolList.remove(item);
+                UprootMod.toolList.remove(item);
 
                 // Remove from config
                 toolIdList.remove(Objects.requireNonNull(item.getRegistryName()).toString());
@@ -140,7 +139,7 @@ public class VeinminerConfigCommand  {
                 List<String> blockIdList = (List<String>) Config.BLOCK_ID_LIST.get();
 
                 if (mod == ListChangeBehaviour.ADD) {
-                    VeinminerMod.blockList.add(block);
+                    UprootMod.blockList.add(block);
 
                     // Add to config
                     blockIdList.add(Objects.requireNonNull(block.getRegistryName()).toString());
@@ -150,7 +149,7 @@ public class VeinminerConfigCommand  {
                             .append(new TranslationTextComponent(block.getTranslationKey()))
                             .append(new StringTextComponent(" to block list")),true);
                 } else {
-                    VeinminerMod.blockList.remove(block);
+                    UprootMod.blockList.remove(block);
 
                     // Remove from config
                     blockIdList.remove(block.getRegistryName().toString());

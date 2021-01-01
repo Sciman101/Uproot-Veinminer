@@ -1,6 +1,4 @@
-package info.sciman.veinminer.setup;
-
-import net.minecraftforge.registries.ForgeRegistries;
+package info.sciman.uproot.setup;
 
 import java.util.Arrays;
 import java.util.List;
