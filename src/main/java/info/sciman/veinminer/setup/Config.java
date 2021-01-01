@@ -33,8 +33,6 @@ public class Config {
 
         // Actually build it
         SERVER_CONFIG = SERVER_BUILDER.build();
-
-        VeinminerMod.reloadBlockAndToolList();
     }
 
 

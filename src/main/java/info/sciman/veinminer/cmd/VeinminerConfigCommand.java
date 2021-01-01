@@ -31,7 +31,7 @@ public class VeinminerConfigCommand  {
 
     public static void register(CommandDispatcher<CommandSource> dispatcher) {
         LiteralCommandNode<CommandSource> cmdVeinminer = dispatcher.register(
-                Commands.literal("veinminer").requires(cs -> cs.hasPermissionLevel(2))
+                Commands.literal("vm").requires(cs -> cs.hasPermissionLevel(2))
 
                         .then(Commands.literal("blocklist")
                             .then(Commands.literal("add")
